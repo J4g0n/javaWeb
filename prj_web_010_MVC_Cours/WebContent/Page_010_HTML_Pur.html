@@ -1,10 +1,107 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-    Hello
-</body>
+<!-- ***************************************************************************** -->
+<!-- Exemples de code HTML � r�utiliser dans les autres exercices incluant du PHP 	-->
+<!-- ***************************************************************************** -->
+<html> 
+	<!--	====================================================================================== -->
+	<!--  	EXEMPLES CONCRETS : UTILISATION HTML en VUE D UN COURS PHP								-->
+	<!-- 	===================================================================================== -->
+	<!-- 	Titre dans la barre de titre de la page Web : balise <head> et -->
+	<!-- 	et <title> -->
+	<!-- 	===================================================================================== -->
+    <head> 
+        <title>Me voyez vous dans la barre de titre de la page Web </title> 
+    </head>
+    <!-- 	*************************************************************************** -->
+    <!--  	ici commence le contenu de la page : balise <body> 						-->
+    <!-- 	*************************************************************************** -->
+	<body>
+		<!-- *************************************************************************** -->
+    	<!--  un titre formatt� dans la page : balises <h1> � <h6>  					-->
+    	<!-- *************************************************************************** -->
+    	<h1>Je suis un Titre Important</h1> 
+       	<h2>Je suis un Titre moins important</h2>
+       	<h3>Je suis un Titre moins moins important</h3>
+       	<h4>Je suis un Titre moins moins moins important</h4>
+       	<h5>Je suis un Titre moins moins moins moins important</h5>
+       	<h6>Je suis un Titre moins moins moins moins moins important</h6>
+       	<!-- 	*************************************************************************** -->
+    	<!--  	un texte dans la page : � formatter par les balises de formattage :  		-->
+    	<!-- 	*************************************************************************** -->
+       	<FONT COLOR="#0000FF">Je suis un texte en Bleu</FONT><BR>
+       	<FONT COLOR="#0000FF"><B>Je suis un texte en Bleu et en gras</B></FONT><BR>
+       	<FONT COLOR="#FF0000"><B>Je suis un texte en Rouge et en gras</B></FONT><BR>
+       	<!-- 	*************************************************************************** -->
+    	<!--  	les balises de formattage en HTML : faites des exemples avec       		-->
+    	<!-- 	les balises <B>   <STRONG>  <I>  <EM> <FONT SIZE>  <FONT COLOR> <BR>      -->
+    	<!-- 	<CENTER> ....etc               											-->
+    	<!-- 	*************************************************************************** -->
+    	<!-- 																				--> 
+    	<!-- 	*************************************************************************** -->
+    	<!-- 	un champ de saisie :														-->
+    	<!-- 	*************************************************************************** -->
+    	<p>Votre nom : <input type="text" name="nom" /></p>
+    	<p><B>Votre pr�nom : </B><input type="text" name="prenom"/></p>
+    	<!-- 																				-->
+    	<!-- 	*************************************************************************** -->
+    	<!-- 	un champ de saisie de type mot de passe										-->
+    	<!-- 	*************************************************************************** -->
+    	<p>		Mot de passe : <input name="pwd" type="Password"/></p>
+    	<!-- 	*************************************************************************** -->
+    	<!-- 	une liste sans s�lection possible :										-->
+    	<!-- 	*************************************************************************** -->
+    	<H3>Les mois d'automne</H3>
+		<OL><LI>octobre
+		<LI>novembre
+		<LI>d&eacute;cembre</OL>
+    	<!-- 	*************************************************************************** -->
+    	<!-- 	un champ liste d�roulante  :												-->
+    	<!-- 	*************************************************************************** -->
+    	<select name="situationFamiliale" size="1"> 
+                <option value="cel">C�libataire</option> 
+                <option value="mar">Mari�(e)</option> 
+                <option value="div">Divorc�(e)</option>
+                <option value="pac">Pacs�(e)</option>
+                <option value="veu">Veuf(ve)</option>
+        </select>  	
+        <!-- 	*************************************************************************** -->
+    	<!-- 	un champ liste d�roul�e  : utiliser l'attribut size 						-->
+    	<!--			pour une multis�lection : utiliser l'attribut Multiple 				-->
+    	<!-- 	*************************************************************************** -->
+        <select name="jour" size="7"> 
+                <option value="lu">Lundi</option> 
+                <option value="ma">Mardi</option> 
+                <option value="me">Mercredi</option>
+                <option value="je">Jeudi</option>
+                <option value="ve">Vendredi</option>
+                <option value="sa">Samedi</option>
+                <option value="di">Dimanche</option>
+        </select>
+		<!--  	********************************************************************* 	--> 
+    	<!-- 	un champ boutons radio (boutons � options) :							-->
+    	<!-- 	********************************************************************** -->
+    			<p><input type="radio" name="choix" value="ad">admis
+				<p><input type="radio" name="choix" value="re">redoublement accepte
+				<p><input type="radio" name="choix" value="ex">redoublement exclu 
+    	<!--  	********************************************************************* 	--> 
+    	<!-- 	un champ chekbox (cases � cocher) :										-->
+    	<!-- 	********************************************************************** -->
+    			<p><B>Vous prendrez bien :</B>
+    			<br>Une entr�e ?
+    			<input name="choixMenu[]" type="checkbox" Value="Ent">
+				<br>
+				Un Plat Principale ?
+				<input name="choixMenu[]" type="checkbox" Value="Pri">
+				<br>
+				Un Dessert ?
+				<input name="choixMenu[]" type="checkbox" Value="des"  CHECKED>
+		<!-- 	*************************************************************************** -->
+		<!-- 	Bouton � cliquer de type submit	: donnera lieu � une action											 -->
+		<!-- 	*************************************************************************** -->
+    			<br>
+    			<input value="valider" type="submit" name="btn_valider">
+    	<!-- 	*************************************************************************** -->
+		<!-- 	Bouton � cliquer de type reset : initialise les donn�es saisies												 -->
+		<!-- 	*************************************************************************** -->
+    			<br>
+    			<input value="Annuler" type="reset" name="btn_annuler">		
 </html>
