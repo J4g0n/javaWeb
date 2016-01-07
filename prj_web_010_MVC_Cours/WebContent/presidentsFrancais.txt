@@ -1,0 +1,3 @@
+Sarkozy;Nicolas;Sarkozy.jpg
+Chirac;Jacques;Chirac.jpg
+Mitterand;Francois;Mitterand.jpg
