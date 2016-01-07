@@ -20,4 +20,24 @@
         <servlet-name>Bonjour</servlet-name>
         <url-pattern>/hello</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <description>Servlet appelante</description>
+        <display-name>Appelante</display-name>
+        <servlet-name>Appelante</servlet-name>
+        <servlet-class>controllers.Appelante</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Appelante</servlet-name>
+        <url-pattern>/appelante</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <description>Servlet appelee</description>
+        <display-name>Appelee</display-name>
+        <servlet-name>Appelee</servlet-name>
+        <servlet-class>controllers.Appelee</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Appelee</servlet-name>
+        <url-pattern>/appelee</url-pattern>
+    </servlet-mapping>
 </web-app>
