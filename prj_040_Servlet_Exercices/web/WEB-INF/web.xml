@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+    <display-name>prj_Web_040_Servlet_Exercices</display-name>
+    <context-param>
+        <param-name>language</param-name>
+        <param-value>FR</param-value>
+    </context-param>
+
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+        <welcome-file>index.jsp</welcome-file>
+        <welcome-file>default.html</welcome-file>
+        <welcome-file>default.jsp</welcome-file>
+    </welcome-file-list>
+
+    <servlet>
+        <description>Servlet Bienvenue</description>
+        <display-name>Connexion</display-name>
+        <servlet-name>Connexion</servlet-name>
+        <servlet-class>controllers.Connexion</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Connexion</servlet-name>
+        <url-pattern>/connexion</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <description>Servlet Bienvenue</description>
+        <display-name>SrvAiguillage</display-name>
+        <servlet-name>SrvAiguillage</servlet-name>
+        <servlet-class>controllers.SrvAiguillage</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SrvAiguillage</servlet-name>
+        <url-pattern>/route</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <description>Servlet Bienvenue</description>
+        <display-name>SrvFactures</display-name>
+        <servlet-name>SrvFactures</servlet-name>
+        <servlet-class>controllers.SrvFactures</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SrvFactures</servlet-name>
+        <url-pattern>/factures</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <description>Servlet Bienvenue</description>
+        <display-name>SrvEspacePerso</display-name>
+        <servlet-name>SrvEspacePerso</servlet-name>
+        <servlet-class>controllers.SrvEspacePerso</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SrvEspacePerso</servlet-name>
+        <url-pattern>/espacePerso</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <description>Servlet Bienvenue</description>
+        <display-name>Boutique</display-name>
+        <servlet-name>Boutique</servlet-name>
+        <servlet-class>controllers.Boutique</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Boutique</servlet-name>
+        <url-pattern>/boutique</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <description>Servlet Bienvenue</description>
+        <display-name>SrvControleCompte</display-name>
+        <servlet-name>SrvControleCompte</servlet-name>
+        <servlet-class>controllers.SrvControleCompte</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SrvControleCompte</servlet-name>
+        <url-pattern>/controleCompte</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <description>Servlet Bienvenue</description>
+        <display-name>SrvMessages</display-name>
+        <servlet-name>SrvMessages</servlet-name>
+        <servlet-class>controllers.SrvMessages</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SrvMessages</servlet-name>
+        <url-pattern>/messages</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <description>Servlet Bienvenue</description>
+        <display-name>SrvNouveauCompte</display-name>
+        <servlet-name>SrvNouveauCompte</servlet-name>
+        <servlet-class>controllers.SrvNouveauCompte</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SrvNouveauCompte</servlet-name>
+        <url-pattern>/nouveauCompte</url-pattern>
+    </servlet-mapping>
+</web-app>
