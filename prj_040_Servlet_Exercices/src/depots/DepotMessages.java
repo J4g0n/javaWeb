@@ -34,7 +34,7 @@ public class DepotMessages {
                 id = Integer.parseInt(infosFichier[0]);
                 auteur = infosFichier[1];
                 contenu = infosFichier[2];
-                parent = Integer.parseInt(infosFichier[3]);
+                parent = Integer.parseInt(infosFichier[3].trim());
                 date = infosFichier[4];
 
                 listMessages.add(new Message(id, auteur, contenu, parent, date, true));
@@ -56,7 +56,7 @@ public class DepotMessages {
 
         while (listMessage.hasNext()) {
             Message m = listMessage.next();
-            if (m.parent >= 0) {
+            if (m.parent > 0) {
                 listTopics.add(m);
             }
         }

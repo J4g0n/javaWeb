@@ -1,9 +1,9 @@
-1; simon; "super duper message"; noparent; 12/05/2014; oui;
+1; simon; "super duper message"; 0; 12/05/2014; oui;
 2; j4g0n; "trop cool"; 1; 14/05/2014; oui;
 3; simon; "super duper message"; 1; 12/05/2014; non:
-4; j4g0n; "nouveau message"; noparent; 22/10/2015; oui;
+4; j4g0n; "nouveau message"; 0; 22/10/2015; oui;
 5; simon; "super réponse"; 4; 22/10/2015; oui;
 6; good; "ca roxxe"; 4; 12/11/2015; oui;
 7; good; "ou pas hein !"; 4; 02/01/2016; non;
-8; j4g0n; "Ohohoh"; noParent; 05/01/2016; non;
-9; simon; "c'est le père noel"; noParent; 05/01/2016; oui;
+8; j4g0n; "Ohohoh"; 0; 05/01/2016; non;
+9; simon; "c'est le père noel"; 8; 05/01/2016; oui;

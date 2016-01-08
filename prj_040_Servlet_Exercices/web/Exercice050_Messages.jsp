@@ -15,6 +15,7 @@
         <%
             // remplir avec des messages
         %>
+        <jsp:forward page="SrvMessages"/>
         Messages !!!!
     </table>
 </body>
