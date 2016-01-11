@@ -50,13 +50,27 @@ public class DepotMessages {
         return listMessages;
     }
 
-    public static List<Message> recupererTopic() {
+    public static List<Message> recupererDiscussions() {
         ListIterator<Message> listMessage = recupererMessages().listIterator();
         List<Message> listTopics = new ArrayList<Message>();
 
         while (listMessage.hasNext()) {
             Message m = listMessage.next();
-            if (m.parent > 0) {
+            if (!(m.parent > 0)) {
+                listTopics.add(m);
+            }
+        }
+
+        return listTopics;
+    }
+
+    public static List<Message> recupererTopic(int topicId) {
+        ListIterator<Message> listMessage = recupererMessages().listIterator();
+        List<Message> listTopics = new ArrayList<Message>();
+
+        while (listMessage.hasNext()) {
+            Message m = listMessage.next();
+            if (m.parent == topicId) {
                 listTopics.add(m);
             }
         }
@@ -65,13 +79,14 @@ public class DepotMessages {
     }
 
     public static void ajouterMessage(String auteur, String contenu, int parent) {
-        File fichier = new File("C:\\Users\\ipi\\Desktop\\Workspace_JavaWeb_Andreux_Simon\\prj_040_Servlet_Exercices\\res\\utilisateurs.txt");
+        File fichier = new File("C:\\Users\\ipi\\Desktop\\Workspace_JavaWeb_Andreux_Simon\\prj_040_Servlet_Exercices\\res\\topics.txt");
 
         try {
             BufferedWriter curseurFichier = new BufferedWriter(new FileWriter(fichier, true));
+            int id = (int) (Math.random() * 10000); // TODO: do better (i'm just doing this in order to test
 
             String date = new Date().toLocaleString();
-            curseurFichier.write(10 + "; " + auteur + "; " + contenu + "; " + parent + "; " + date + ";" + "oui" + ";\n");
+            curseurFichier.write(id + "; " + auteur + "; " + contenu + "; " + parent + "; " + date + ";" + "oui" + ";\n");
 
             curseurFichier.close();
         } catch (FileNotFoundException e) {

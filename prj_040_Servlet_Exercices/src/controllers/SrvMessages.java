@@ -18,17 +18,39 @@ import java.util.ListIterator;
  */
 @WebServlet("/SrvMessages")
 public class SrvMessages extends HttpServlet {
+    private String newMessageButton(String label, int parentId) {
+        return  "<a href=\"Exercice050_NouveauTopic.jsp?parent=" + parentId + "\">" +
+                    "<button>" + label + "</button>" +
+                "</a>";
+    }
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         doGet(request, response);
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         PrintWriter printer = response.getWriter();
-        ListIterator<Message> listMessage = DepotMessages.recupererTopic().listIterator();
+        ListIterator<Message> listTopic = DepotMessages.recupererDiscussions().listIterator();
 
-        while (listMessage.hasNext()) {
-            Message m = listMessage.next();
-            printer.println("Message n°" + m.id + ": " + m.contenu);
+        printer.println(newMessageButton("Nouveau topic", -1));
+        printer.println("<br/><br/>");
+        printer.println("<table>");
+
+        while (listTopic.hasNext()) {
+            Message m = listTopic.next();
+            ListIterator<Message> listMessage = DepotMessages.recupererTopic(m.id).listIterator();
+            printer.println("<tr>" +
+                                "<td>Topic n°" + m.id + ": " + m.contenu + "</td>" +
+                                "<td>" + newMessageButton("Repondre", m.id) + "</td>" +
+                            "</tr>");
+            while (listMessage.hasNext()) {
+                m = listMessage.next();
+                printer.println("<tr>" +
+                                    "<td>    >> " + m.auteur + " " + m.id + ": " + m.contenu + "</br></td>" +
+                                "</tr>");
+            }
         }
+
+        printer.println("</table>");
     }
 }

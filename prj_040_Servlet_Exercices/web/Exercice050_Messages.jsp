@@ -11,12 +11,6 @@
     <title>Exercice 050 Messages</title>
 </head>
 <body>
-    <table>
-        <%
-            // remplir avec des messages
-        %>
-        <jsp:forward page="SrvMessages"/>
-        Messages !!!!
-    </table>
+    <jsp:forward page="SrvMessages"/>
 </body>
 </html>

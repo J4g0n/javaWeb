@@ -44,6 +44,8 @@ public class SrvControleCompte extends HttpServlet {
         String password = request.getParameter("password");
 
         if (existeCompte(login, password)) {
+            request.getSession().setAttribute("login", login);
+
             String url = "/Exercice050_Messages.jsp";
             response.sendRedirect(url);
         }

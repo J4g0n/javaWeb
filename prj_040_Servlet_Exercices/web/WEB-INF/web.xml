@@ -102,5 +102,16 @@
     <servlet-mapping>
         <servlet-name>SrvNouveauCompte</servlet-name>
         <url-pattern>/nouveauCompte</url-pattern>
+    </servlet-mapping> 
+    
+    <servlet>
+        <description>Servlet Bienvenue</description>
+        <display-name>NouveauTopic</display-name>
+        <servlet-name>NouveauTopic</servlet-name>
+        <servlet-class>controllers.NouveauTopic</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>NouveauTopic</servlet-name>
+        <url-pattern>/nouveauTopic</url-pattern>
     </servlet-mapping>
 </web-app>
