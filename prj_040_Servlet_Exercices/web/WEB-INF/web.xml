@@ -114,4 +114,15 @@
         <servlet-name>NouveauTopic</servlet-name>
         <url-pattern>/nouveauTopic</url-pattern>
     </servlet-mapping>
+    
+    <servlet>
+        <description>Servlet Bienvenue</description>
+        <display-name>SrvCocktails</display-name>
+        <servlet-name>SrvCocktails</servlet-name>
+        <servlet-class>controllers.SrvCocktails</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SrvCocktails</servlet-name>
+        <url-pattern>/cocktails</url-pattern>
+    </servlet-mapping>
 </web-app>
