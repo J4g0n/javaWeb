@@ -9,10 +9,11 @@
 <html>
 <head>
     <title>Exercice 070 Accès BD</title>
+    <link rel="stylesheet" type="" href="Exercice070_CSS.css">
 </head>
 <body>
-    <a href="#">Accueil</a>
-    <a href="SrvCocktails">Cocktails</a>
-    <a href="#">Restaurant</a>
+    <%@include file="Exercice070_Entete.jsp" %>
+    <%@include file="Exercice070_Menu.jsp" %>
+    <%@include file="Exercice070_Pied.jsp" %>
 </body>
 </html>

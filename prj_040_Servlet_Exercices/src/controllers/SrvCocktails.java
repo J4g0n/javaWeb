@@ -55,8 +55,7 @@ public class SrvCocktails extends HttpServlet {
         PrintWriter printer = response.getWriter();
         ArrayList<Cocktail> listCocktail = listCocktails();
 
-        for (Cocktail cocktail: listCocktail) {
-            printer.println("<h4>" + cocktail.getNom() + "</h4>");
-        }
+        request.setAttribute("cocktails", listCocktail);
+        request.getRequestDispatcher("Exercice070_Cocktails.jsp").forward(request, response);
     }
 }

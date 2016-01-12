@@ -1,0 +1,54 @@
+h1 {
+    float: right;
+    margin: 122px 300px 0 0;
+    color: blueviolet;
+    font-family: cursive;
+}
+
+.menu {
+    padding: 0;
+    list-style-type: none;
+    border: solid 2px darkgrey;
+}
+
+.menu li {
+    display: inline-flex;
+    width: 33%;
+}
+
+.menu li:nth-child(2) {
+    border-left: solid 1px darkgrey;
+    border-right: solid 1px darkgrey;
+}
+
+.menu li a {
+    display: block;
+    margin: 0 auto;
+}
+
+table {
+    width: 100%;
+    border: solid 5px darkgrey;
+}
+
+table tr {
+    border: solid 2px darkgrey;
+}
+
+table td {
+    text-align: center;
+    border: solid 2px darkgrey;
+}
+.footer {
+    position: absolute;
+    width: 99%;
+    bottom: 10px;
+}
+
+.mention {
+    float: left;
+}
+
+.powered {
+    float: right;
+}
